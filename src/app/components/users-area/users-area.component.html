@@ -1,0 +1,52 @@
+<nav class="users-nav">
+  <ul class="users-nav__links">
+    <li class="users-nav__link"><a routerLink="/users" routerLinkActive="active-link" routerLinkActiveOptions="{exact:true}">Users</a></li>
+    <li class="users-nav__link"><a routerLink="/pending-users" routerLinkActive="active-link" routerLinkActiveOptions="{exact:true}">Pending Users</a></li>
+    <li class="users-nav__link"><a routerLink="/leaderboard" routerLinkActive="active-link" routerLinkActiveOptions="{exact:true}">Leaderboard</a></li>
+  </ul>
+</nav>
+<div class="users-actions" >
+  <div class="users-action">
+    <input type="checkbox" class="users-action__checkbox">
+    <h2 class="users-action__count">{{usersCount}} Users</h2>
+    <form action="#" class="search">
+      <input type="text" class="search__input" placeholder="Search">
+      <button class="search__button">
+        <svg class="search__icon">
+          <use xlink:href="../../../assets/sprite.svg#icon-search"></use>
+        </svg>
+      </button>
+    </form>
+    <div class="users-action__buttons">
+      <app-users-area-filter [filterType]="'Type:All'"></app-users-area-filter>
+      <app-users-area-filter [filterType]="'Sort:A-Z'"></app-users-area-filter>
+      <app-users-area-filter [filterType]="'Groups: All'"></app-users-area-filter>
+    </div>
+    <a href="" class="users-action__add"><span>&#43;</span> Add Filter </a>
+  </div>
+  <div>
+    <button class="users-actions__creation" (click)="openDialog()">
+      <svg class="users-actions__creation-plus">
+        <use xlink:href="../../../assets/sprite.svg#icon-plus"></use>
+      </svg> Create
+    </button>
+    <button class="users-actions__creation-action">
+      <svg class="users-actions__creation-dots">
+        <use xlink:href="../../../assets/sprite.svg#icon-dots-three-vertical"></use>
+      </svg>
+       Actions
+    </button>
+  </div>
+</div>
+
+<div *ngFor="let user of users">
+  <app-user-card [user]="user"></app-user-card>
+</div>
+<div class="users__pagination">
+  <ul class="pagination modal">
+    <li><a href="#" class="prev">&laquo;</a></li>
+    <li><a href="#" class="active">1</a></li>
+    <li><a href="#" class="next">&raquo;</a></li>
+  </ul>
+</div>
+

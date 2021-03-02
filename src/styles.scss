@@ -1,0 +1,14 @@
+@import '../src/app/styles/base';
+@import '../src/app/styles/layout';
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.custom-modalbox {
+  mat-dialog-container {
+      background-color: var(--color-grey-dark-1);
+  }
+}
+
+

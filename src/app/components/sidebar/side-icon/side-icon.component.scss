@@ -1,0 +1,15 @@
+.side-nav {
+  &__link:link,
+  &__link:visited {
+    color: var(--color-grey-dark-2);
+    text-decoration:none;
+    text-transform: uppercase;
+    display:block;
+    padding: .5rem 1rem;
+  }
+  &__icon{
+    width: 2rem;
+    height: 3rem;
+    fill:var(--color-grey-light-3);
+  }
+}

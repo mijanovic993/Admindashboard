@@ -1,0 +1,38 @@
+<mat-card class="users-card">
+  <div>
+    <input type="checkbox" class="users-card__checkbox">
+    <div class="users-card__user">
+      <img src="../../../assets/Images/user-5.jpg" alt="User photo" class="users-card__user-photo">
+    </div>
+    <div>
+      <h3 class="users-card__username">{{user.first_name}} {{user.last_name}}</h3>
+      <p class="users-card__email" aria-label="Email">{{user.email}}</p>
+    </div>
+  </div>
+
+  <div>
+    <div class="users-card__feature">
+      <svg class="users-card__icon">
+        <use xlink:href="../../../assets/sprite.svg#icon-book"></use>
+      </svg>
+      <h3 class="users-card__count">5</h3>
+    </div>
+    <div class="users-card__feature">
+      <svg class="users-card__icon">
+        <use xlink:href="../../../assets/sprite.svg#icon-user"></use>
+      </svg>
+      <h3 class="users-card__count">2</h3>
+    </div>
+    <div class="users-card__feature">
+      <svg class="users-card__icon">
+        <use xlink:href="../../../assets/sprite.svg#icon-flag"></use>
+      </svg>
+      <h3 class="users-card__count">2</h3>
+    </div>
+    <div class="users-card__feature">
+      <svg class="users-card__icon">
+        <use xlink:href="../../../assets/sprite.svg#icon-dots-three-vertical"></use>
+      </svg>
+    </div>
+  </div>
+</mat-card>

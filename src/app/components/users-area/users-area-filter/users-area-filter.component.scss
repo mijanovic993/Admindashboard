@@ -1,0 +1,15 @@
+.users-actions__button{
+  background-color: var(--color-grey-light-2);
+  border: .1rem solid var(--color-grey-light-5);
+  height: 3.5rem;
+  border-radius: .5rem;
+  padding: .7rem 2rem;
+  margin-left: 2rem;
+    &:focus {
+      outline:none;
+
+    }
+    &:hover {
+      cursor: pointer;
+    }
+}

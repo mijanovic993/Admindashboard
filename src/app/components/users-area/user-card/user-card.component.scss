@@ -1,0 +1,51 @@
+.users-card{
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 2rem auto;
+  background-color: var(--color-grey-light-2);
+  font-size: 1.3rem;
+  color: inherit;
+  >div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > * {
+      margin-right: 1.5rem;
+    }
+  }
+  &__icon{
+    margin-top:.4rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    fill:var(--color-grey-light-5);
+
+  }
+  &__icon:last-child {
+    fill:var(--color-blue-dark-1);
+  }
+  &__icon:last-child:hover {
+    cursor: pointer;
+  }
+  &__feature:not(:last-child){
+    display: flex;
+    margin-right: 12rem!important;
+    > *{
+      margin-left: .5rem;
+    }
+  }
+
+  &__user-photo{
+    height: 3.75rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  &__username {
+    color: var(--color-blue-dark-1);
+  }
+  &__email {
+    color: var(--color-grey-dark-1);
+  }
+  &__count {
+    color: var(--color-blue-dark-1);
+  }
+}
